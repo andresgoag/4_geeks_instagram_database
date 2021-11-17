@@ -85,9 +85,8 @@ class Follower(Base):
 
     id = Column(Integer, primary_key=True)
     user_from_id = Column(Integer, ForeignKey('user.id'))
-    user_from = relationship(User)
     user_to_id = Column(Integer, ForeignKey('user.id'))
-    user_to = relationship(User)
+    user = relationship(User)
     
 
 
